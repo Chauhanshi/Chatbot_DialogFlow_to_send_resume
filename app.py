@@ -4,11 +4,7 @@ import os
 from flask_cors import cross_origin
 from SendEmail.sendEmail import EmailSender
 from logger import logger
-<<<<<<< HEAD
 #from email_templates import template_reader
-=======
-from email_templates import template_reader
->>>>>>> 61fc369a9b6277bc8758d7dbf0bce2573969a3dd
 
 app = Flask(__name__)
 
@@ -42,7 +38,6 @@ def processRequest(req):
 
     result = req.get("queryResult")
     user_says=result.get("queryText")
-<<<<<<< HEAD
     log.write_log(sessionID, "User is: "+user_says)
     parameters = result.get("parameters")
     cust_name=parameters.get("usr_name")
@@ -59,26 +54,6 @@ def processRequest(req):
         #email_message_support = email_file_support.read()
         #email_sender.send_email_to_support(cust_name=cust_name,cust_contact=cust_contact,cust_email=cust_email,course_name=course_name,body=email_message_support)
         fulfillmentText="We have sent the Resume and other details to your email. Thanks you. Do you have further queries?"
-=======
-    log.write_log(sessionID, "User Says: "+user_says)
-    parameters = result.get("parameters")
-    cust_name=parameters.get("cust_name")
-    #print(cust_name)
-    cust_contact = parameters.get("cust_contact")
-    cust_email=parameters.get("cust_email")
-    course_name= parameters.get("course_name")
-    intent = result.get("intent").get('displayName')
-    if (intent=='course_selection'):
-
-        email_sender=EmailSender()
-        template= template_reader.TemplateReader()
-        email_message=template.read_course_template(course_name)
-        email_sender.send_email_to_student(cust_email,email_message)
-        email_file_support = open("email_templates/support_team_Template.html", "r")
-        email_message_support = email_file_support.read()
-        email_sender.send_email_to_support(cust_name=cust_name,cust_contact=cust_contact,cust_email=cust_email,course_name=course_name,body=email_message_support)
-        fulfillmentText="We have sent the course syllabus and other relevant details to you via email. An email has been sent to the Support Team with your contact information, you'll be contacted soon. Do you have further queries?"
->>>>>>> 61fc369a9b6277bc8758d7dbf0bce2573969a3dd
         log.write_log(sessionID, "Bot Says: "+fulfillmentText)
         return {
             "fulfillmentText": fulfillmentText
