@@ -1,0 +1,45 @@
+{
+  "responseId": "f0f2b589-38f4-4241-9529-c3e97afecaf0-421809c4",
+  "queryResult": {
+    "queryText": "alex",
+    "parameters": {
+      "usr_email": "shiv21new@gmail.com",
+      "usr_name": "alex"
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentText": "We have sent the Resume and other details to your email. Thanks you. Do you have further queries?",
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "We have sent the Resume and other details to your email. Thanks you. Do you have further queries?"
+          ]
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/personal-web-portfolio-chatbot/locations/global/agent/intents/70eead75-da6b-4cc6-a6f3-99fcdfe88344",
+      "displayName": "Send_Resume"
+    },
+    "intentDetectionConfidence": 0.3,
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {
+        "score": 0.1,
+        "magnitude": 0.1
+      }
+    }
+  },
+  "outputAudio": "UklGRr75AwBXQVZFZm10IBAAAAABAAEAwF0AAIC7AAACABAAZGF0YZr5AwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA... (The content is truncated. Click `COPY` for the original JSON.)",
+  "outputAudioConfig": {
+    "audioEncoding": "OUTPUT_AUDIO_ENCODING_LINEAR_16",
+    "synthesizeSpeechConfig": {
+      "speakingRate": 1,
+      "voice": {}
+    }
+  },
+  "agentId": "63a72e0d-6a6f-4e3a-8a13-7b2525cd4779",
+  "agentSettings": {
+    "enableAgentWideTts": true
+  }
+}
