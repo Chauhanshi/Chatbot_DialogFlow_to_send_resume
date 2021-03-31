@@ -29,7 +29,11 @@ class EmailSender:
             body=message
 
             # attach the body with the msg instance
+<<<<<<< HEAD
             self.msg.attach(MIMEText(open("email_templates/Resume_Shivam_Chauhan.pdf").read()))
+=======
+            self.msg.attach(MIMEText(body, 'html'))
+>>>>>>> 61fc369a9b6277bc8758d7dbf0bce2573969a3dd
 
 
             # instance of MIMEBase and named as p
