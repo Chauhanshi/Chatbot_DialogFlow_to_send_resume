@@ -48,7 +48,7 @@ def processRequest(req):
 
         email_sender=EmailSender()
         #template= template_reader.TemplateReader()
-        email_message=" Hello. PFA Shivam Chauhan Resume "
+        email_message="Hello. PFA Shivam Chauhan Resume"
         email_sender.send_email_to_student(cust_email,email_message)
         #email_file_support = open("email_templates/support_team_Template.html", "r")
         #email_message_support = email_file_support.read()
