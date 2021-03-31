@@ -8,6 +8,21 @@ from logger import logger
 
 app = Flask(__name__)
 
+@app.route('/')
+@app.route('/home')
+def home():
+    log = logger.Log()
+
+    sessionID=req.get('responseId')
+
+
+    result = req.get("queryResult")
+    user_says=result.get("queryText")
+    log.write_log(sessionID, "User is: "+user_says)
+    parameters = result.get("parameters")
+    cust_name=parameters.get("usr_name")
+
+    return(usr_name + " " + usr_email)
 
 
 # geting and sending response to dialogflow
